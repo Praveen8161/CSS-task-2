@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    justify-content: left;
+}
+
+.heading{
+    background-color: darkslategrey;
+    min-height: 60vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    color:aliceblue;
+}
+
+.grid-main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+    justify-items: center;
+    align-items: center;
+    margin: 5px;
+    padding: 50px;
+}
+
+.box1 p,.box2 p{
+    overflow: auto;
+    max-height: 50vh;
+}
+
+.box2{
+    order: 1;
+}
+
+.box3{
+    grid-row: span 2;
+}
+
+.box3 img{
+    max-width: 100%;
+    height: auto;
+}
+
+.button{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.link{
+    color: aliceblue;
+    font-size: larger;
+    padding: 5px;
+}
+
+.button .wiki{
+    background-color: brown;
+}
+
+.button .videos{
+    background-color: red;
+}
+
+.button .books{
+    background-color: rgb(198, 136, 22);
+}
+
+.quote{
+    background-color: black;
+    color:aliceblue;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.awards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 30px;
+    gap: 0.5rem;
+}
+
+legend{
+    text-align: center;
+}
+
+.awards legend::before{
+    content: "⭐";
+    background-color: white;
+}
+
+.awards div{
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+.author-works{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.foot{
+    background-color: black;
+    color: aliceblue;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    gap: 2rem;
+}
+
+@media screen and (max-width:400px){
+    .box3{
+        grid-column: 2;
+        grid-row:1;
+    }
+
+    .box2{
+        grid-column: span 2;
+    }
+}
+
+
